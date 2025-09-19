@@ -1,11 +1,32 @@
 #include <iostream>
-#include <cmath>
 
-void main()
-{
-	float a = 1.75, b = 4.5e-4, y, r;
-	y = a * exp(-2 * b) - sqrt(1 + a);
-	r = log(1 + 20 * b) / (1 + a);
-	std::cout << " y = " << y << std::endl;
-	std::cout << " r = " << r << std::endl;
+// Объявляем функции из других файлов
+int add_my();
+int add_1();
+int add_2();
+int add_3();
+
+int main() {
+    int choice;
+    std::cout << "Выбери задачу (1-4): ";
+    std::cin >> choice;
+
+    switch (choice) {
+    case 1:
+        add_my();
+        break;
+    case 2:
+        add_1();
+        break;
+    case 3:
+        add_2();
+        break;
+    case 4:
+        add_3();
+        break;
+    default:
+        std::cout << "Нет такой задачи!" << std::endl;
+    }
+
+    return 0;
 }
