@@ -8,7 +8,7 @@ int add_3();
 
 int main() {
     int choice;
-    std::cout << "Выбери задачу (1-4): ";
+    std::cout << "Select a task (1-4): ";
     std::cin >> choice;
 
     switch (choice) {
@@ -25,7 +25,7 @@ int main() {
         add_3();
         break;
     default:
-        std::cout << "Нет такой задачи!" << std::endl;
+        std::cout << "There is no such task!" << std::endl;
     }
 
     return 0;
