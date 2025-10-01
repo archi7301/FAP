@@ -21,6 +21,5 @@ int apartments() {
 
     cout << "Entrance: " << entrance << endl;
     cout << "Floor: " << floor << endl;
-
     return 0;
 }
