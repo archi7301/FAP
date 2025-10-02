@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int apartments() {
+int apartments() 
+{
     int apartmentNumber;
     cout << "Enter the apartment number: ";
     cin >> apartmentNumber;
@@ -21,5 +22,6 @@ int apartments() {
 
     cout << "Entrance: " << entrance << endl;
     cout << "Floor: " << floor << endl;
+
     return 0;
 }
