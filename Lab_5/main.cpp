@@ -2,24 +2,28 @@
 #include <conio.h>
 using namespace std;
 
-int house();
-int apartments();
+int even_odd_num();
+int switch_case();
+int discriminant();
 
 int main()
 {
-    while (true) 
+    while (true)
     {
 
         int choice;
-        cout << "Select a task (1-2): ";
+        cout << "Select a task (1-3): ";
         cin >> choice;
 
         switch (choice) {
         case 1:
-            house();
+            even_odd_num();
             break;
         case 2:
-            apartments();
+            switch_case();
+            break;
+        case 3:
+            discriminant();
             break;
         default:
             cout << "There is no such task!" << endl;
@@ -27,8 +31,9 @@ int main()
 
         cout << "\nPress ESC to exit...\n" << endl;
 
-        int key = _getch(); 
-        if (key == 27) {      
+        int key = _getch();
+        if (key == 27) 
+        {
             break;
         }
     }

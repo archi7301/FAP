@@ -1,36 +1,35 @@
-#include <iostream>    // включает заголовочные файлы стандартных библиотек с помощью директивы препроцессора #include
-#include <iomanip>     // iomanip — это заголовочный файл, содержащий функции-манипуляторы
-#include <stdio.h>     // stdio.h - Заголовочный файл, который используется при форматированнии ввода-вывода данных
-#include <conio.h>     // conio.h. поддерживает функцию _getch(), которая ожидает нажатия клавиши на клавиатуре
-using namespace std;   // используя стандартное пространство имен
+#include <iostream>    
+#include <iomanip>     
+#include <stdio.h>     
+#include <conio.h>     
+using namespace std;   
 
 void input_output()
 {
-	setlocale(LC_CTYPE, "Russian");   // setlocale(LC_CTYPE, "Russian") - используется для вывода русского текста
+	setlocale(LC_CTYPE, "Russian");   
 	int t;
-	cout << "Введите t=";   // cout - стандартный поток вывода
-	cin >> t;			    // cin - стандартный поток ввода
+	cout << "Введите t=";   
+	cin >> t;			    
 	cout << "t=" << t << endl;
-	cout << "Тип Размер в байтах: " << endl;        // endl - переход на новую строку
-	cout << "int: " << sizeof(int) << endl;	        // dec – вывод числа в десятичной системе
-	cout << "char: " << sizeof(char) << endl;       // oct – вывод числа в восьмеричной системе
-	cout << "float: " << sizeof(float) << endl;		// hex – вывод числа в шестнадцатеричной системе 
+	cout << "Тип Размер в байтах: " << endl;        
+	cout << "int: " << sizeof(int) << endl;	        
+	cout << "char: " << sizeof(char) << endl;       
+	cout << "float: " << sizeof(float) << endl;		
 	cout << "double: " << sizeof(double) << endl;
-	// sizeof определяет размер объекта в байтах
 
 	char c, probel; probel = ' ';
 	cout << "Введите символ: "; cin >> c;
-	cout << setw(35) << setfill(probel) << probel;   // setw(int n) - устанавливает ширину поля вывода в n символов
-	cout << setw(10) << setfill(c) << c << endl;	 // setfill(int n) - символ-заполнитель
-	cout << setw(34) << setfill(probel) << probel;	 // setbase(int n) – установить систему счисления для вывода чисел (n = 0, 2, 8, 10, 16, причем 0 означает систему счисления по умолчанию, т.е. 10)
+	cout << setw(35) << setfill(probel) << probel;   
+	cout << setw(10) << setfill(c) << c << endl;	 
+	cout << setw(34) << setfill(probel) << probel;	 
 	cout << setw(12) << setfill(c) << c << endl;
 	cout << setw(33) << setfill(probel) << probel;
 	cout << setw(14) << setfill(c) << c << endl;
 
 	double e = 2.71828;
-	cout << setw(3) << setprecision(2) << e << endl;   // setprecision(int n) - устанавливает количество цифр после запятой
+	cout << setw(3) << setprecision(2) << e << endl;   
 
-	printf("\n\t Privet\n");    // Функция printf() печатает информацию. 
+	printf("\n\t Privet\n");     
 	printf("\n... Press key");
 	_getch();
 
@@ -38,19 +37,4 @@ void input_output()
 	puts("Как вас зовут? ");
 	gets_s(name);
 	printf("Привет, %s\n", name);
-
-	// Каждому аргументу функции printf() соответствует своя спецификация преобразования, которая начинается с символа процента(%), после которого стоит буква, указывающая тип данного:
-	// %d – десятичное целое число;
-	// %f – вещественное число типа float или double;
-	// %c – символ;
-	// %s – строка;
-	// %p – указатель;
-	// %u – беззнаковое целое число;
-	// %o – целое число в восьмеричной системе счисления;
-	// %x – целое число в шестнадцатеричной системе счисления;
-	// %e – вещественное число в экспоненциальной форме.
-	// После символа % можно указывать строку цифр, задающую минимальную ширину поля вывода, например: %5d (для целого числа), %4.2f (для вещественного числа – две цифры после запятой для поля шириной 4 символа). 
-
-	// Функция scanf() позволяет вводить данные любых типов. В качестве аргументов используются указатели объектов &. Например, scanf(“%d%f”, &x, &y)
-
 }

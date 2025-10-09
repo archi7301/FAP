@@ -1,6 +1,5 @@
 #include <iostream>
 
-// Объявляем функции из других файлов
 int add_my();
 int add_1();
 int add_2();
@@ -11,7 +10,8 @@ int main() {
     std::cout << "Select a task (1-4): ";
     std::cin >> choice;
 
-    switch (choice) {
+    switch (choice) 
+    {
     case 1:
         add_my();
         break;
